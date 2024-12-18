@@ -1,0 +1,14 @@
+{
+  "name": "loyola-pulivendula-backend",
+  "version": "1.0.0",
+  "description": "This Repo is for Backend code in Express.js which is Node.js framework of Loyola Polytechnic Institute",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "AFL-3.0",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

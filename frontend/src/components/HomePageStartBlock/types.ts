@@ -37,10 +37,12 @@ export interface HomePageStartBlockProps {
     | {
         title: string;
         color?: undefined;
+        url: string;
       }
     | {
         title: string;
         color: string;
+        url: string;
       }
   )[];
   t: TFunction;

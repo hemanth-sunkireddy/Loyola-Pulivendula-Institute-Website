@@ -39,7 +39,12 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
           },
           body: JSON.stringify(values),
         });
-
+        notification["success"]({
+          message: "Success",
+          description:
+            "Thank you for reaching us, we'll get back to you soon.",
+        });
+        return;
         if (!response.ok) {
           notification["error"]({
             message: "Error",

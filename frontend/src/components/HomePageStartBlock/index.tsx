@@ -17,6 +17,7 @@ import {
   ButtonWrapper,
   IframeStyle
 } from "./styles";
+import { useNavigate } from "react-router-dom";
 
 const HomePageStartBlock = ({
   videourl,
@@ -34,7 +35,7 @@ const HomePageStartBlock = ({
       behavior: "smooth",
     });
   };
-
+  const navigation = useNavigate();
   return (
     <ContentSection>
       <Fade direction={direction} triggerOnce>
@@ -63,6 +64,7 @@ const HomePageStartBlock = ({
                         item: {
                           title: string;
                           color?: string;
+                          url: string;
                         },
                         id: number
                       ) => {
@@ -70,7 +72,7 @@ const HomePageStartBlock = ({
                           <Button
                             key={id}
                             color={item.color}
-                            onClick={() => scrollTo("about")}
+                            onClick={() => navigation(item.url)}
                           >
                             {t(item.title)}
                           </Button>

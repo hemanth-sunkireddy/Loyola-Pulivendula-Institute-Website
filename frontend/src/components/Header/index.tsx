@@ -4,6 +4,7 @@ import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
+import { Link } from "react-router-dom";
 import {
   HeaderSection,
   LogoContainer,
@@ -18,7 +19,6 @@ import {
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
-
   const toggleButton = () => {
     setVisibility(!visible);
   };
@@ -33,14 +33,25 @@ const Header = ({ t }: { t: TFunction }) => {
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
+        <CustomNavLinkSmall>
+        <Link to="/">
+          <Span>{t("Home")}</Span>
+        </Link>
+        </CustomNavLinkSmall>
+        <CustomNavLinkSmall>
+        <Link to="/about">
           <Span>{t("About")}</Span>
+        </Link>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("admissions")}>
+        <CustomNavLinkSmall>
+        <Link to="/admissions">
           <Span>{t("Admissions")}</Span>
+        </Link>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
+        <CustomNavLinkSmall>
+        <Link to="/events">
           <Span>{t("Events")}</Span>
+        </Link>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
           style={{ width: "180px" }}

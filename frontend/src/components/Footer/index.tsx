@@ -51,42 +51,58 @@ const Footer = ({ t }: { t: TFunction }) => {
         <Container>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
-              <Language>{t("Contact")}</Language>
-              <Large to="/">{t("Tell us everything")}</Large>
+              <Language>{t("How to Reach us")}</Language>
+              <Large to="tel:+91 9912342029">{t("Contact Number")}</Large>
               <Para>
-                {t(`Do you have any question? Feel free to reach out.`)}
+                {t(`+91 9912342029, 08568 - 286309`)}
               </Para>
-              <a href="mailto:l.qqbadze@gmail.com">
-                <Chat>{t(`Let's Chat`)}</Chat>
+              <a href="mailto:loyolapoly.pulivendla@gmail.com">
+                <Chat>{t(`Email Address`)}</Chat>
               </a>
+              <Para>
+                {t(`loyolapoly.pulivendla@gmail.com`)}
+              </Para>
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Policy")}</Title>
-              <Large to="/">{t("Application Security")}</Large>
-              <Large to="/">{t("Software Principles")}</Large>
+              <Title>{t("Quick Links")}</Title>
+              <Large to="https://loyolapolytechnic.co.in/BROCHURE.pdf" target="_blank" rel="noopener noreferrer">
+                {t("Institute Brochure")}
+              </Large>
+              {/* <Large to="/">{t("Software Principles")}</Large> */}
             </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
+            {/* <Col lg={6} md={6} sm={12} xs={12}>
               <Empty />
               <Large to="/">{t("Support Center")}</Large>
               <Large to="/">{t("Customer Support")}</Large>
-            </Col>
+            </Col> */}
           </Row>
           <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
               <Empty />
               <Language>{t("Address")}</Language>
-              <Para>Rancho Santa Margarita</Para>
-              <Para>2131 Elk Street</Para>
-              <Para>California</Para>
+              <Para>Loyola Polytechnic College (YSRR),</Para>
+              <Para>Pulivendla - 516390, YSR District,</Para>
+              <Para>Andhra Pradesh, India.</Para>
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Company")}</Title>
-              <Large to="/">{t("About")}</Large>
-              <Large to="/">{t("Blog")}</Large>
-              <Large to="/">{t("Press")}</Large>
-              <Large to="/">{t("Careers & Culture")}</Large>
+              <Title>{t("Developers")}</Title>
+              <Para>
+                {t(`Rev. Fr. Siri Annareddy`)}
+              </Para>
+              <Para>
+                {t(`Siri Annareddy`)}
+              </Para>
+              <Para>
+                {t(`Siri Annareddy`)}
+              </Para>
+              <Para>
+                {t(`Siri Annareddy`)}
+              </Para>
+              <Para>
+                {t(`Siri Annareddy`)}
+              </Para>
             </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
+            {/* <Col lg={6} md={6} sm={12} xs={12}>
               <Label htmlFor="select-lang">{t("Language")}</Label>
               <LanguageSwitchContainer>
                 <LanguageSwitch onClick={() => handleChange("en")}>
@@ -106,7 +122,7 @@ const Footer = ({ t }: { t: TFunction }) => {
                   />
                 </LanguageSwitch>
               </LanguageSwitchContainer>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </FooterSection>
@@ -127,35 +143,14 @@ const Footer = ({ t }: { t: TFunction }) => {
                 />
               </LogoContainer>
             </NavLink>
+            <FooterContainer>
+              <p>copyright ⓒ 2024, Loyola Polytechnic, Pulivendula. All rights reserved.</p>
+            </FooterContainer>
             {/* <FooterContainer>
-              <SocialLink
-                href="https://github.com/Adrinlol/create-react-app-adrinlol"
-                src="github.svg"
-              />
-              <SocialLink
-                href="https://twitter.com/Adrinlolx"
-                src="twitter.svg"
-              />
-              <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
-                src="linkedin.svg"
-              />
-              <SocialLink
-                href="https://medium.com/@lashakakabadze/"
-                src="medium.svg"
-              />
-              <a
-                href="https://ko-fi.com/Y8Y7H8BNJ"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  height="36"
-                  style={{ border: 0, height: 36 }}
-                  src="https://storage.ko-fi.com/cdn/kofi3.png?v=3"
-                  alt="Buy Me a Coffee at ko-fi.com"
-                />
-              </a>
+              <p>Designed and Developed by Siri and her team.</p>
+            </FooterContainer>
+            <FooterContainer>
+              <p>Last updated on Dec 2024 .</p>
             </FooterContainer> */}
           </Row>
         </Container>

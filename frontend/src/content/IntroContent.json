@@ -4,10 +4,10 @@
   "videourl": "https://www.youtube.com/watch?v=mwVWIJHGWGU",
   "button": [
     {
-      "title": "Explore"
+      "title": "Explore Courses"
     },
     {
-      "title": "Learn more",
+      "title": "Infrastructure",
       "color": "#fff"
     }
   ]

@@ -15,6 +15,7 @@ import {
   MinPara,
   StyledRow,
   ButtonWrapper,
+  IframeStyle
 } from "./styles";
 
 const HomePageStartBlock = ({
@@ -44,7 +45,11 @@ const HomePageStartBlock = ({
           direction={direction}
         >
           <Col lg={11} md={11} sm={12} xs={24} style={{ paddingLeft: '7%' }}>
-            <iframe width="200%" height="100%" src="https://www.youtube.com/embed/fFXliHpgBiU?si=DZEVfNHegdz-Wbdm&amp;start=98" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"></iframe>
+          <IframeStyle
+              src="https://www.youtube.com/embed/fFXliHpgBiU?si=DZEVfNHegdz-Wbdm&amp;start=98"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+            />
           </Col>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>

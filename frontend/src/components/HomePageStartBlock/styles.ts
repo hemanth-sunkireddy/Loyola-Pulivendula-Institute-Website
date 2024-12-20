@@ -1,6 +1,7 @@
 import { Row } from "antd";
 import styled from "styled-components";
 
+// Existing styled components...
 export const ContentSection = styled("section")`
   position: relative;
   padding: 10rem 0 8rem;
@@ -62,5 +63,15 @@ export const ButtonWrapper = styled("div")`
 
   button:last-child {
     margin-left: 20px;
+  }
+`;
+
+// New iframeStyle for responsive iframe
+export const IframeStyle = styled("iframe")`
+  width: 200%;
+  height: 100%;
+
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
   }
 `;

@@ -6,12 +6,12 @@ import { MiddleBlockSection, Content, ContentWrapper } from "./styles";
 
 interface MiddleBlockProps {
   title: string;
-  content: string;
+  imageURL: string;
   button: string;
   t: TFunction;
 }
 
-const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
+const MiddleBlock = ({ title, imageURL, button, t }: MiddleBlockProps) => {
   const scrollTo = (id: string) => {
     const element = document.getElementById(id) as HTMLDivElement;
     element.scrollIntoView({
@@ -21,13 +21,13 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
   return (
     <MiddleBlockSection>
       <Slide direction="up" triggerOnce>
-        <Row justify="center" align="middle">
+        <Row justify="center" align="middle" style={{backgroundColor: '#e3ccbc'}}>
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
-              <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
+              <h5>{t(title)}</h5>
+              <img src={imageURL} />
               {button && (
-                <Button name="submit" onClick={() => scrollTo("mission")}>
+                <Button name="submit">
                   {t(button)}
                 </Button>
               )}

@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import IntroContent from "../../content/IntroContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
+// import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
@@ -17,7 +17,7 @@ const HomePageStartBlock = lazy(() => import("../../components/HomePageStartBloc
 const About = () => {
   return (
     <Container>
-      <p>This is about page will update soon.</p>
+      <p className="text-9xl underline">This is about page will update soon.</p>
       <ScrollToTop />
 {/*     
       <HomePageStartBlock

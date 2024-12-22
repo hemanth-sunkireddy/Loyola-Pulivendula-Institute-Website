@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Computer Engineering",
+    "imageURL": "./img/software-engineer.png",
+    "button": "View Course"
+  },
+  {
+    "title": "Electrical Engineering",
+    "imageURL": "./img/electrical_engineer.png",
+    "button": "View Course"
+  },
+  {
+    "title": "Electronics Engineering",
+    "imageURL": "./img/communication.png",
+    "button": "View Course"
+  },
+  {
+    "title": "Mechanical Engineering",
+    "imageURL": "./img/mechanical_engineer.png",
+    "button": "View Course"
+  },
+  {
+    "title": "Civil Engineering",
+    "imageURL": "./img/civil_engineer.png",
+    "button": "View Course"
+  },
+  {
+    "title": "Chemical Engineering",
+    "imageURL": "./img/chemical.png",
+    "button": "View Course"
+  }
+]

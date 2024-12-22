@@ -15,6 +15,7 @@ const Courses = () => {
               title={course.title}
               imageURL={course.imageURL}
               button={course.button}
+              name={course.name}
             />
           </div>
         ))}

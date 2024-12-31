@@ -96,7 +96,7 @@ const Footer = ({ t }: { t: TFunction }) => {
                 {t(`B.Pavithra`)}
               </Para>
               <Para>
-                {t(`B.Pavithra`)}
+                {t(`K.Lavanya`)}
               </Para>
               <Para>
                 {t(`K.Sai Sree`)}

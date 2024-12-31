@@ -1,0 +1,103 @@
+[
+  {
+    "title": "Computer Engineering",
+    "imageURL": "./img/software-engineer.png",
+    "vision": "To equip students with adequate technical knowledge for integrating into real-time projects and prepare them to contribute to the fields of academics, industries, and society.",
+    "name": "computer-engineer",
+    "mission": [
+      "M-1: To produce high-quality computer science diploma graduates who understand fundamental concepts in computer engineering through intellectual inputs.",
+      "M-2: To impart quality education, hands-on experience, and value education while being sensitive to environmental, safety, and economic contexts in solving real-world problems.",
+      "M-3: To expose students to intensive training in computer engineering tools and applications, preparing them for careers in the industry and profession."
+    ],
+    "peos": [
+      "PEO1: Understand the principles and operations of computer systems, and assess both hardware and software aspects.",
+      "PEO2: Understand software development methodologies, possess skills in the software design process, and demonstrate practical competence in programming languages and open-source platforms.",
+      "PEO3: Apply mathematical methodologies to solve computational tasks, model real-world problems with appropriate data structures and algorithms, and use industry experience gained during training to establish new ventures."
+    ]
+  },
+  {
+    "title": "Electrical Engineering",
+    "imageURL": "./img/electrical_engineer.png",
+    "button": "View Course",
+    "name": "electrical-engineer",
+    "vision": "To develop Electrical & Electronics Engineering Professionals competent to face the global challenges in an Edifying environment conductive to learn technical knowledge, skills blended with ethics and values, to Coordinate and serve to the society for betterment and comfortable living.",
+    "mission": [
+      "M-1: To provide quality education and training in the design, analysis, and implementation of electrical systems.",
+      "M-2: To develop professional engineers who can innovate, adapt to emerging technologies, and address the growing demand for energy efficiency and sustainability.",
+      "M-3: To prepare students for careers in electrical engineering by providing opportunities for practical exposure, industrial training, and research."
+    ],
+    "peos": [
+      "PEO1: Ability to apply engineering principles to solve real-world electrical engineering problems in both academic and professional settings.",
+      "PEO2: Equipped with the skills to analyze, design, and manage electrical systems, focusing on sustainable and efficient energy use.",
+      "PEO3: Develop ethical, social, and environmental responsibility while pursuing continuous learning and contributing to technological advancement."
+    ]
+  },
+  {
+    "title": "Electronics Engineering",
+    "imageURL": "./img/communication.png",
+    "button": "View Course",
+    "name": "electronics-engineer",
+    "vision": "To prepare engineers who can innovate and advance electronics technologies for solving modern societal challenges.",
+    "mission": [
+      "M-1: To provide quality education in the principles and applications of electronics, telecommunications, and related fields.",
+      "M-2: To foster a culture of innovation and creativity in electronics and communication systems.",
+      "M-3: To prepare students to meet the demands of industry and research, equipping them with the necessary technical skills and ethical values."
+    ],
+    "peos": [
+      "PEO1: Ability to design, develop, and implement electronics and communication systems with a focus on practical and innovative solutions.",
+      "PEO2: Equip students with a strong foundation in both the theory and application of electronics systems for real-world challenges.",
+      "PEO3: Develop leadership, teamwork, and ethical values in students, preparing them for continuous professional growth in electronics engineering."
+    ]
+  },
+  {
+    "title": "Mechanical Engineering",
+    "imageURL": "./img/mechanical_engineer.png",
+    "button": "View Course",
+    "name": "mechanical-engineer",
+    "vision": "To produce highly competent mechanical engineers who excel in designing and implementing innovative mechanical systems to meet global technological needs.",
+    "mission": [
+      "M-1: To provide a comprehensive education in the principles of mechanical engineering, emphasizing both theoretical and practical aspects.",
+      "M-2: To foster critical thinking, creativity, and innovation among students, preparing them to address global engineering challenges.",
+      "M-3: To equip students with the necessary skills to work effectively in diverse engineering environments, focusing on sustainability and advanced technologies."
+    ],
+    "peos": [
+      "PEO1: Ability to analyze and design mechanical systems using modern tools and techniques in the field of mechanical engineering.",
+      "PEO2: Develop problem-solving skills and an understanding of manufacturing, design, and thermodynamics to address real-world issues.",
+      "PEO3: Foster ethical, professional, and environmental responsibility while contributing to the advancement of mechanical engineering technologies."
+    ]
+  },
+  {
+    "title": "Civil Engineering",
+    "imageURL": "./img/civil_engineer.png",
+    "button": "View Course",
+    "name": "civil-engineer",
+    "vision": "To develop professional civil engineers capable of solving complex infrastructural problems for sustainable development and societal well-being.",
+    "mission": [
+      "M-1: To provide an in-depth understanding of civil engineering principles and applications, preparing students for real-world challenges.",
+      "M-2: To offer hands-on learning experiences that enhance the understanding of construction, design, and analysis of civil structures.",
+      "M-3: To prepare students for leadership roles in civil engineering, promoting sustainable practices and ensuring safety, ethics, and professionalism."
+    ],
+    "peos": [
+      "PEO1: Ability to design, analyze, and implement civil engineering solutions to meet societal infrastructure needs.",
+      "PEO2: Develop an understanding of sustainable construction practices and apply them to real-world civil engineering problems.",
+      "PEO3: Exhibit leadership, ethical responsibility, and commitment to continuous professional development in civil engineering."
+    ]
+  },
+  {
+    "title": "Chemical Engineering",
+    "imageURL": "./img/chemical.png",
+    "button": "View Course",
+    "name": "chemical-engineer",
+    "vision": "To develop chemical engineers capable of innovating sustainable solutions for industrial processes and contributing to the advancement of science and technology.",
+    "mission": [
+      "M-1: To provide students with a solid foundation in chemical engineering principles, preparing them for the design, optimization, and operation of industrial processes.",
+      "M-2: To instill in students the ability to innovate and solve complex problems related to chemical processing and sustainability.",
+      "M-3: To equip students with the skills necessary to work effectively in interdisciplinary teams, promoting both professional growth and societal contributions."
+    ],
+    "peos": [
+      "PEO1: Ability to apply chemical engineering principles to develop innovative and sustainable solutions for industrial processes.",
+      "PEO2: Equip students with problem-solving skills to optimize production systems and contribute to the sustainable development of chemical industries.",
+      "PEO3: Promote ethical practices and continuous learning, preparing students to take leadership roles in chemical engineering advancements."
+    ]
+  }
+]

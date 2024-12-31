@@ -1,0 +1,48 @@
+[
+  {
+    "title": "Covid Care",
+    "imageURL": "./img/covid-care.jpg",
+    "name": "covid-care",
+    "button": ""
+  },
+  {
+    "title": "Project Expro",
+    "imageURL": "./img/project-expro.jpg",
+    "name": "project-expro"
+  },
+  {
+    "title": "Freshers Day",
+    "imageURL": "./img/freshers-day.jpg",
+    "name": "hostel"
+  },
+  {
+    "title": "Sankranthi",
+    "imageURL": "./img/sankranthi.jpg",
+    "name": "Sankranthi"
+  },
+  {
+    "title": "Teachers Day",
+    "imageURL": "./img/teachers-day.jpg",
+    "name" : "Teachers-day"
+  },
+  {
+    "title": "Cleen & Green",
+    "imageURL": "./img/clean-green.jpg",
+    "name": "clean-green"
+  },
+  {
+    "title": "Tiranga Rally",
+    "imageURL": "./img/tiranga-rally.jpg",
+    "name": "tiranga-rally"
+  },
+  {
+    "title": "Flood Relief Help",
+    "imageURL": "./img/flood-relief.jpg",
+    "name":"flood-relief"
+  },
+  {
+    "title": "Alumni Meet",
+    "imageURL": "./img/alumni-meet.jpg",
+    "name":"alumni-meet"
+  }
+]

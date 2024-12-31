@@ -30,7 +30,7 @@ const MiddleBlock = ({ title, imageURL, button, name, t }: MiddleBlockProps) => 
         <Row justify="center" align="middle" style={{ backgroundColor: '#e3ccbc' }}>
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
-              <h5>{t(title)}</h5>
+              <h5 className="text-4xl">{t(title)}</h5>
               <img src={imageURL} alt="Middle Block Image" />
               {button && (
                 <Button name="submit" onClick={handleButtonClick}>

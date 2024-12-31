@@ -1,65 +1,52 @@
 import { lazy } from "react";
-import IntroContent from "../../content/IntroContent.json";
-// import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
-import MissionContent from "../../content/MissionContent.json";
-import ProductContent from "../../content/ProductContent.json";
-import ContactContent from "../../content/ContactContent.json";
+import admissionContent from "../../content/Admissions.json"; // Import the admission content JSON
 
-
-const Contact = lazy(() => import("../../components/ContactForm"));
-const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
-const ContentBlock = lazy(() => import("../../components/ContentBlock"));
-const HomePageStartBlock = lazy(() => import("../../components/HomePageStartBlock"));
 
 const Admissions = () => {
+  const { admissionCriteria } = admissionContent;
+
   return (
     <Container>
-      <p>This is admissions page will update soon.</p>
+      <h1>Admissions</h1>
+      
+      {/* Admission Criteria */}
+      <section>
+        <h1 className="text-3xl">Seat Distribution</h1>
+        <p>{admissionCriteria.quota.minorityQuota}</p>
+        <p>{admissionCriteria.quota.generalQuota}</p>
+
+        <h2 className="text-3xl">Courses Available</h2>
+        <ul>
+          {admissionCriteria.coursesAvailable.map((course, index) => (
+            <li key={index}>
+              <strong>{course.courseName}</strong>: {course.intake} seats (Duration: {course.duration})
+            </li>
+          ))}
+        </ul>
+
+        <h2 className="text-3xl">Admission Policy</h2>
+        <p>{admissionCriteria.admissionPolicy.minorityQuotaSeats}</p>
+        <p>{admissionCriteria.admissionPolicy.governmentQuotaSeats}</p>
+
+        <h2 className="text-3xl">Eligibility Criteria</h2>
+        <p>{admissionCriteria.eligibilityCriteria.entranceExam}</p>
+        <ul>
+          {admissionCriteria.eligibilityCriteria.requirements.map((requirement, index) => (
+            <li key={index}>{requirement}</li>
+          ))}
+        </ul>
+
+        <h2 className="text-3xl">Documents Required</h2>
+        <ul>
+          {admissionCriteria.documentsRequired.map((document, index) => (
+            <li key={index}>{document}</li>
+          ))}
+        </ul>
+      </section>
+
       <ScrollToTop />
-{/*     
-      <HomePageStartBlock
-        direction="right"
-        title={IntroContent.title}
-        content={IntroContent.text}
-        button={IntroContent.button}
-        videourl={IntroContent.videourl}
-        id="intro"
-      />
-      <MiddleBlock
-        title={MiddleBlockContent.title}
-        content={MiddleBlockContent.text}
-        button={MiddleBlockContent.button}
-      />
-      <ContentBlock
-        direction="left"
-        title={AboutContent.title}
-        content={AboutContent.text}
-        section={AboutContent.section}
-        icon="graphs.svg"
-        id="about"
-      />
-      <ContentBlock
-        direction="right"
-        title={MissionContent.title}
-        content={MissionContent.text}
-        icon="product-launch.svg"
-        id="mission"
-      />
-      <ContentBlock
-        direction="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon="waving.svg"
-        id="product"
-      />
-      <Contact
-        title={ContactContent.title}
-        content={ContactContent.text}
-        id="contact"
-      /> */}
     </Container>
   );
 };

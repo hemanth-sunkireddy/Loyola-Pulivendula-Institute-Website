@@ -87,19 +87,19 @@ const Footer = ({ t }: { t: TFunction }) => {
             <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{t("Developers")}</Title>
               <Para>
-                {t(`Rev. Fr. Siri Annareddy`)}
+                {t(`Rev. Fr. K.Veeranjaneya Reddy`)}
               </Para>
               <Para>
-                {t(`Siri Annareddy`)}
+                {t(`A. Siri`)}
               </Para>
               <Para>
-                {t(`Siri Annareddy`)}
+                {t(`B.Pavithra`)}
               </Para>
               <Para>
-                {t(`Siri Annareddy`)}
+                {t(`B.Pavithra`)}
               </Para>
               <Para>
-                {t(`Siri Annareddy`)}
+                {t(`K.Sai Sree`)}
               </Para>
             </Col>
             {/* <Col lg={6} md={6} sm={12} xs={12}>

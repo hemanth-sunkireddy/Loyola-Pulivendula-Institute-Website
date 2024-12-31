@@ -84,20 +84,17 @@
     ]
   },
   {
-    "title": "Chemical Engineering",
+    "title": "Mining Engineering",
     "imageURL": "./img/chemical.png",
     "button": "View Course",
     "name": "chemical-engineer",
-    "vision": "To develop chemical engineers capable of innovating sustainable solutions for industrial processes and contributing to the advancement of science and technology.",
+    "vision": "Vision of the Institute To Maintain the Standard of Mining Education and Commitment for Basic Research and Ap- plied Research in the diverse fields of Mining and excavation engineering.",
     "mission": [
-      "M-1: To provide students with a solid foundation in chemical engineering principles, preparing them for the design, optimization, and operation of industrial processes.",
-      "M-2: To instill in students the ability to innovate and solve complex problems related to chemical processing and sustainability.",
-      "M-3: To equip students with the skills necessary to work effectively in interdisciplinary teams, promoting both professional growth and societal contributions."
+      "M-1: Produce Mining Engineers in the Field of Mining Operation and Mine Planning by strengthening the Basic scientific and Engineering Knowledge.",
+      "M-2:Cultivate in students to pursue higher education in Mining operations and planning Related fields and develop the Entrepreneurship Skills in Mining."
     ],
     "peos": [
-      "PEO1: Ability to apply chemical engineering principles to develop innovative and sustainable solutions for industrial processes.",
-      "PEO2: Equip students with problem-solving skills to optimize production systems and contribute to the sustainable development of chemical industries.",
-      "PEO3: Promote ethical practices and continuous learning, preparing students to take leadership roles in chemical engineering advancements."
+      "To develop graduates with the knowledge and skills required to analyze, design, and manage mining operations, focusing on safety, sustainability, and efficient resource extraction techniques."
     ]
   }
 ]

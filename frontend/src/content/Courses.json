@@ -30,8 +30,8 @@
     "name": "civil-engineer"
   },
   {
-    "title": "Chemical Engineering",
-    "imageURL": "./img/chemical.png",
+    "title": "Mining Engineering",
+    "imageURL": "./img/mining-engineer.png",
     "button": "View Course",
     "name": "chemical-engineer"
   }

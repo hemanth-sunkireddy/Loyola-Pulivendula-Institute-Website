@@ -9,6 +9,11 @@ const routes = [
     exact: true,
     component: "About",
   },
+  {
+    path: ["/admin"],
+    exact: true,
+    components: "Admin"
+  }
 ];
 
 export default routes;

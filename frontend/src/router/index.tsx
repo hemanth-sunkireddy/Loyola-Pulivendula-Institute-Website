@@ -11,6 +11,7 @@ import Infrastructure from "../pages/Infrastructure";
 import Admissions from "../pages/Admissions";
 import Events from "../pages/Events";
 import CourseSingle from "../pages/Course_Single";
+import Admin from "../pages/Admin";
 
 const Router = () => {
   return (
@@ -35,6 +36,7 @@ const Router = () => {
       <Route key={"admissions"} path={"/admissions"}  element={<Admissions />} />
       <Route key={"events"} path={"/events"}  element={<Events />} />
       <Route key={"courseSingle"} path={"/course"}  element={<CourseSingle />} />
+      <Route key={"admin"} path={"/admin"}  element={<Admin />} />
       </Routes>
       <Footer />
     </Suspense>

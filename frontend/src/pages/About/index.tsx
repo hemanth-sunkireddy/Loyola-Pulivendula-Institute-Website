@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import Container from "../../common/Container";
 import ScrollToTop from "../../common/ScrollToTop";
-import aboutContent from "../../content/History.json"; // Import the About.json file
+import aboutContent from "../../content/History.json";
+import MiddleBlockContent from "../../content/People.json";
+import AboutBlock from "../../components/AboutBlock";
 
 const About = () => {
   const [aboutHistory, setAboutHistory] = useState<any>(null);
@@ -13,6 +15,20 @@ const About = () => {
 
   return (
     <Container>
+      <div className="grid grid-cols-1 gap-1 lg:grid-cols-3 lg:gap-20 md:grid-cols-2 md:gap-10">
+        {/* Dynamically render MiddleBlock for each course */}
+        {MiddleBlockContent.map((course, index) => (
+          <div key={index}>
+            <AboutBlock
+              linkURL={course.linkURL}
+              title={course.title}
+              imageURL={course.imageURL}
+              button={course.button}
+              name={course.name}
+            />
+          </div>
+        ))}
+      </div>
       {/* Render historical content */}
       {aboutHistory ? (
         <section>

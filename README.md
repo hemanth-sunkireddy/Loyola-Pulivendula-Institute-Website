@@ -1,5 +1,6 @@
 # Loyola Pulivendula Insitute Website 
 
+> Live Webiste URL: https://loyolapolytechnic-plvd.life/
 ## Frontend
 Developed with React
 

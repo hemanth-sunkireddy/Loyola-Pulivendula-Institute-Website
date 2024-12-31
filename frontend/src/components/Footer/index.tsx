@@ -87,7 +87,7 @@ const Footer = ({ t }: { t: TFunction }) => {
             <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{t("Developers")}</Title>
               <Para>
-                {t(`Rev. Fr. K.Veeranjaneya Reddy`)}
+                {t(`Sir K.Veeranjaneya Reddy`)}
               </Para>
               <Para>
                 {t(`A. Siri`)}

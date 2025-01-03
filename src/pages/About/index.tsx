@@ -15,7 +15,7 @@ const About = () => {
 
   return (
     <Container>
-      <div className="grid grid-cols-1 gap-1 lg:grid-cols-3 lg:gap-20 md:grid-cols-2 md:gap-10">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 md:grid-cols-2">
         {/* Dynamically render MiddleBlock for each course */}
         {MiddleBlockContent.map((course, index) => (
           <div key={index}>

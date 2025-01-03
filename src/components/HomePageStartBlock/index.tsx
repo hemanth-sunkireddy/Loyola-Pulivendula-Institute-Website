@@ -40,12 +40,12 @@ const HomePageStartBlock = ({
     <ContentSection>
       <Fade direction={direction} triggerOnce>
         <StyledRow
-          justify="space-between"
+          justify="center"
           align="middle"
           id={id}
           direction={direction}
         >
-          <Col lg={11} md={11} sm={12} xs={24} style={{ paddingLeft: '7%' }}>
+          <Col lg={12} md={12} sm={12} xs={24} style={{ paddingLeft: '10%', paddingRight: '1%' }}>
           <IframeStyle
               src="https://www.youtube.com/embed/fFXliHpgBiU?si=DZEVfNHegdz-Wbdm&amp;start=98"
               title="YouTube video player"

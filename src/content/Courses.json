@@ -24,15 +24,15 @@
     "name": "mechanical-engineer"
   },
   {
-    "title": "Civil Engineering",
-    "imageURL": "./img/civil_engineer.png",
-    "button": "View Course",
-    "name": "civil-engineer"
-  },
-  {
     "title": "Mining Engineering",
     "imageURL": "./img/mining-engineer.png",
     "button": "View Course",
     "name": "chemical-engineer"
+  },
+  {
+    "title": "Civil Engineering",
+    "imageURL": "./img/civil_engineer.png",
+    "button": "View Course",
+    "name": "civil-engineer"
   }
 ]

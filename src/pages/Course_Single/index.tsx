@@ -46,28 +46,28 @@ const CourseSingle = () => {
       {/* Render course details if they are available */}
       {courseDetails ? (
         <>
-          <h3>{courseDetails.title}</h3>
+          <h1 className="text-4xl font-semibold text-gray-900 mb-4">{courseDetails.title}</h1>
           {/* <img src={courseDetails.imageURL} alt={courseDetails.title} /> */}
           
-          <h4>Vision</h4>
-          <p>{courseDetails.vision}</p>
+          <h4 className="text-2xl font-medium text-gray-800 mt-6">Vision</h4>
+          <p className="text-lg text-gray-700 mt-2">{courseDetails.vision}</p>
           
-          <h4>Mission</h4>
-          <ul>
+          <h4 className="text-2xl font-medium text-gray-800 mt-6">Mission</h4>
+          <ul className="list-inside list-disc pl-6 mt-2">
             {courseDetails.mission.map((item, index) => (
-              <li key={index} className="text-2xl">{item}</li>
+              <li key={index} className="text-lg text-gray-700">{item}</li>
             ))}
           </ul>
           
-          <h4>Program Educational Objectives (PEOs)</h4>
-          <ul>
+          <h4 className="text-2xl font-medium text-gray-800 mt-6">Program Educational Objectives (PEOs)</h4>
+          <ul className="list-inside list-disc pl-6 mt-2">
             {courseDetails.peos.map((item, index) => (
-              <li key={index} className="text-2xl">{item}</li>
+              <li key={index} className="text-lg text-gray-700">{item}</li>
             ))}
           </ul>
         </>
       ) : (
-        <p>Loading course details...</p>
+        <p className="text-lg text-gray-500">Loading course details...</p>
       )}
 
       <ScrollToTop />

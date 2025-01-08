@@ -1,120 +1,59 @@
-import { Row, Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
-
-import { ContentBlockProps } from "./types";
 import { HomePageStartBlockProps } from "./types";
 import { Button } from "../../common/Button";
-import { SvgIcon } from "../../common/SvgIcon";
-import {
-  ContentSection,
-  Content,
-  ContentWrapper,
-  ServiceWrapper,
-  MinTitle,
-  MinPara,
-  StyledRow,
-  ButtonWrapper,
-  IframeStyle
-} from "./styles";
 import { useNavigate } from "react-router-dom";
 
 const HomePageStartBlock = ({
   videourl,
   title,
   content,
-  section,
   button,
   t,
   id,
   direction,
 }: HomePageStartBlockProps) => {
-  const scrollTo = (id: string) => {
-    const element = document.getElementById(id) as HTMLDivElement;
-    element.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
   const navigation = useNavigate();
+
   return (
-    <ContentSection>
+    <section className="py-12 bg-white">
       <Fade direction={direction} triggerOnce>
-        <StyledRow
-          justify="center"
-          align="middle"
-          id={id}
-          direction={direction}
-        >
-          <Col lg={12} md={12} sm={12} xs={24} style={{ paddingLeft: '10%', paddingRight: '1%' }}>
-          <IframeStyle
-              src="https://www.youtube.com/embed/fFXliHpgBiU?si=DZEVfNHegdz-Wbdm&amp;start=98"
-              title="YouTube video player"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-            />
-          </Col>
-          <Col lg={11} md={11} sm={11} xs={24}>
-            <ContentWrapper>
-              <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
-              {direction === "right" ? (
-                <ButtonWrapper>
-                  {typeof button === "object" &&
-                    button.map(
-                      (
-                        item: {
-                          title: string;
-                          color?: string;
-                          url: string;
-                        },
-                        id: number
-                      ) => {
-                        return (
-                          <Button
-                            key={id}
-                            color={item.color}
-                            onClick={() => navigation(item.url)}
-                          >
-                            {t(item.title)}
-                          </Button>
-                        );
-                      }
-                    )}
-                </ButtonWrapper>
-              ) : (
-                <ServiceWrapper>
-                  <Row justify="space-between">
-                    {typeof section === "object" &&
-                      section.map(
-                        (
-                          item: {
-                            title: string;
-                            content: string;
-                            icon: string;
-                          },
-                          id: number
-                        ) => {
-                          return (
-                            <Col key={id} span={11}>
-                              {/* <video width="100%">
-                                <source
-                                  src="https://www.youtube.com/watch?v=mwVWIJHGWGU"
-                                  type="video/mp4"
-                                />
-                              </video> */}
-                              <MinTitle>{t(item.title)}</MinTitle>
-                              <MinPara>{t(item.content)}</MinPara>
-                            </Col>
-                          );
-                        }
-                      )}
-                  </Row>
-                </ServiceWrapper>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" id={id}>
+            {/* First Grid: Welcome content and buttons */}
+            <div className="flex flex-col justify-center space-y-6">
+              <h6 className="text-5xl font-extrabold font-mono" style={{color: "#414886"}}>{t(title)}</h6>
+              <p className="text-1xl text-black font-extrabold">{t(content)}</p>
+              {direction === "right" && (
+                <div className="flex space-x-4">
+                  {Array.isArray(button) &&
+                    button.map((item, id) => (
+                      <Button
+                        key={id}
+                        color={item.color}
+                        onClick={() => navigation(item.url)}
+                        // className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300"
+                      >
+                        {t(item.title)}
+                      </Button>
+                    ))}
+                </div>
               )}
-            </ContentWrapper>
-          </Col>
-        </StyledRow>
+            </div>
+
+            {/* Second Grid: Video */}
+            <div className="flex justify-center">
+              <iframe
+                className="w-full sm:h-80 lg:h-96 rounded-md shadow-lg"
+                src="https://www.youtube.com/embed/fFXliHpgBiU?si=DZEVfNHegdz-Wbdm&amp;start=98"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+              />
+            </div>
+          </div>
+        </div>
       </Fade>
-    </ContentSection>
+    </section>
   );
 };
 

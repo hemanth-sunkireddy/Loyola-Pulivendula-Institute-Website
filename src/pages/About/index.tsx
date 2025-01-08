@@ -26,7 +26,7 @@ const About = () => {
               {course.button && (
                 <a
                   href={course.linkURL || "#"}
-                  className="mt-4 inline-block py-2 px-4 bg-indigo-600 text-white text-sm rounded-full hover:bg-indigo-700 transition duration-300"
+                  className="mt-4 inline-block py-2 px-4 bg-indigo-600 text-white text-sm rounded-full hover:bg-orange-500 transition duration-300"
                 >
                   {course.button}
                 </a>

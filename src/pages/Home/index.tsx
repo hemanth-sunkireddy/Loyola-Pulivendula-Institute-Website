@@ -28,19 +28,17 @@ const Home = () => {
         videourl={IntroContent.videourl}
         id="intro"
       />
-      {/* <MiddleBlock
-        title={MiddleBlockContent.title}
-        content={MiddleBlockContent.text}
-        button={MiddleBlockContent.button}
-      /> */}
+       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:mt-20 mt-3">
+       <div className="bg-sky-200 p-6 rounded-lg">
       <ContentBlock
         direction="left"
         title={AboutContent.title}
         content={AboutContent.text}
-        // section={AboutContent.section}
         icon="graphs.svg"
         id="about"
       />
+      </div>
+      <div className="bg-green-200 p-6 rounded-lg">
       <ContentBlock
         direction="right"
         title={MissionContent.title}
@@ -48,13 +46,8 @@ const Home = () => {
         icon="product-launch.svg"
         id="mission"
       />
-      {/* <ContentBlock
-        direction="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon="waving.svg"
-        id="product"
-      /> */}
+      </div>
+      </div>
       <Contact
         title={ContactContent.title}
         content={ContactContent.text}

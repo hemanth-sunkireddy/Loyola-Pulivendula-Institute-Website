@@ -30,10 +30,9 @@ const Footer = ({ t }: { t: TFunction }) => {
     <>
       {/* Center the iframe and make it responsive */}
       <div className="flex justify-center items-center mb-4">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1932.1100172996794!2d78.23403413867261!3d14.41447559651252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb3ebb21087d297%3A0xe2158153b9bd06f2!2sLoyola%20Polytechnic%20College%2C%20Pulivendula%2C%20Andhra%20Pradesh%20516390!5e0!3m2!1sen!2sin!4v1735667189886!5m2!1sen!2sin"
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.311651150329!2d78.2331143104207!3d14.414105381557754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb3ebb20e9d78fd%3A0xc274721f5e7a7a53!2sLoyola%20Polytechnic%20College%2CPulivendula!5e1!3m2!1sen!2sin!4v1740439198497!5m2!1sen!2sin" 
           className="w-full sm:w-11/12 md:w-2/3 lg:w-2/3 xl:w-2/3 h-64 sm:h-auto md:h-64 lg:h-72 xl:h-80"
-          loading="lazy"
         ></iframe>
       </div>
 

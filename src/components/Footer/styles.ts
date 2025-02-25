@@ -57,7 +57,7 @@ export const Large = styled(Link)`
   text-transform: capitalize;
   line-height: 24px;
   display: block;
-  margin-bottom: 0.625rem;
+  margin-bottom: 0.1rem;
   transition: all 0.3s ease-in-out;
   max-width: max-content;
 

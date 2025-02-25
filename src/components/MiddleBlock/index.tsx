@@ -27,7 +27,7 @@ const MiddleBlock = ({ title, imageURL, button, name, t }: MiddleBlockProps) => 
   return (
     <MiddleBlockSection>
       <Slide direction="up" triggerOnce>
-        <Row justify="center" align="middle" style={{ backgroundColor: '#e3ccbc' }}>
+        <Row justify="center" align="middle" className="bg-stone-300">
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
               <h5 className="text-4xl">{t(title)}</h5>

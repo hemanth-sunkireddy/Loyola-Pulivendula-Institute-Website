@@ -3,6 +3,7 @@ import { withTranslation } from "react-i18next";
 import { Slide } from "react-awesome-reveal";
 import { ContactProps, ValidationTypeProps } from "./types";
 import { useForm } from "../../common/utils/useForm";
+import { SvgIcon } from "../../common/SvgIcon";
 import validate from "../../common/utils/validationRules";
 import { Button } from "../../common/Button";
 import Block from "../Block";
@@ -14,7 +15,6 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 
-// Firebase Configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCYbTOTqUajcIkd8oCvpEadFt7RyvBjfng",
   authDomain: "loyola-institute-website.firebaseapp.com",
@@ -25,7 +25,6 @@ const firebaseConfig = {
   measurementId: "G-M5X9CS51T0"
 };
 
-// Initialize Firebase and Firestore
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const analytics = getAnalytics(app);
@@ -33,7 +32,6 @@ const analytics = getAnalytics(app);
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(validate);
 
-  // Handle form reset after successful submission
   const handleReset = () => {
     values.name = "";
     values.email = "";
@@ -42,25 +40,20 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type as keyof typeof errors];
-    return <Span>{ErrorMessage}</Span>;
+    return <span className="text-red-500 text-sm">{ErrorMessage}</span>;
   };
 
-  // Submit handler
   const handleSubmitForm = async (event: React.FormEvent) => {
     event.preventDefault();
-
     const isValid = validate(values);
     if (!isValid) return;
-
     try {
-      // Submit to Firestore
       await addDoc(collection(db, "contact-form"), {
         name: values.name,
         email: values.email,
         message: values.message,
         timestamp: new Date(),
       });
-
       handleReset();
       alert("Message submitted successfully!");
     } catch (error) {
@@ -70,53 +63,63 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
   };
 
   return (
-    <ContactContainer id={id}>
-      <Row justify="space-between" align="middle">
-        <Col lg={12} md={11} sm={24} xs={24}>
-          <Slide direction="left" triggerOnce>
-            <Block title={title} content={content} />
-          </Slide>
-        </Col>
-        <Col lg={12} md={12} sm={24} xs={24}>
-          <Slide direction="right" triggerOnce>
-            <FormGroup autoComplete="off" onSubmit={handleSubmitForm}>
-              <Col span={24}>
-                <Input
+    <div id={id} className="container mx-auto p-4">
+      <h2 className="text-center text-3xl font-bold mb-8">{title}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="bg-stone-300 p-8 rounded-lg flex flex-col md:flex-row">
+          <div className="w-full md:w-1/2 flex items-center justify-center hidden md:flex">
+            <SvgIcon src={"waving.svg"} width="100%" height="100%" />
+          </div>
+          <div className="w-full md:w-1/2">
+            <Slide direction="right" triggerOnce>
+              <div className="mb-4">
+                <input
                   type="text"
                   name="name"
                   placeholder="Your Name"
                   value={values.name || ""}
                   onChange={handleChange}
+                  className="w-full p-2 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <ValidationType type="name" />
-              </Col>
-              <Col span={24}>
-                <Input
+              </div>
+              <ValidationType type="name" />
+              <div className="mb-4">
+                <input
                   type="text"
                   name="email"
                   placeholder="Your Email"
                   value={values.email || ""}
                   onChange={handleChange}
+                  className="w-full p-2 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <ValidationType type="email" />
-              </Col>
-              <Col span={24}>
-                <TextArea
+              </div>
+              <ValidationType type="email" />
+              <div className="mb-4">
+                <textarea
                   placeholder="Your Message"
-                  value={values.message || ""}
                   name="message"
+                  value={values.message || ""}
                   onChange={handleChange}
-                />
-                <ValidationType type="message" />
-              </Col>
-              <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
-              </ButtonContainer>
-            </FormGroup>
-          </Slide>
-        </Col>
-      </Row>
-    </ContactContainer>
+                  className="w-full p-2 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                ></textarea>
+              </div>
+              <ValidationType type="message" />
+              <div className="text-center">
+                <button type="submit" className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition" onClick={handleSubmitForm}>
+                  {t("Submit")}
+                </button>
+              </div>
+            </Slide>
+          </div>
+        </div>
+        <div className="w-full h-auto rounded-lg overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.311651150329!2d78.2331143104207!3d14.414105381557754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb3ebb20e9d78fd%3A0xc274721f5e7a7a53!2sLoyola%20Polytechnic%20College%2CPulivendula!5e1!3m2!1sen!2sin!4v1740439198497!5m2!1sen!2sin"
+            className="w-full h-full border-none"
+          ></iframe>
+        </div>
+      </div>
+    </div>
   );
 };
 

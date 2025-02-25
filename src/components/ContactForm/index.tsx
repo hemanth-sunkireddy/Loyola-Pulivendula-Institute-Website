@@ -14,6 +14,7 @@ import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { color } from "d3";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCYbTOTqUajcIkd8oCvpEadFt7RyvBjfng",
@@ -66,7 +67,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
     <div id={id} className="container mx-auto p-4">
       <h2 className="text-center text-3xl font-bold mb-8">{title}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-stone-300 p-8 rounded-lg flex flex-col md:flex-row">
+        <div className="bg-transparent p-8 rounded-lg flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 flex items-center justify-center hidden md:flex">
             <SvgIcon src={"waving.svg"} width="100%" height="100%" />
           </div>
@@ -100,12 +101,12 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                   name="message"
                   value={values.message || ""}
                   onChange={handleChange}
-                  className="w-full p-2 border rounded text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full p-2 border rounded text-sm  focus:outline-none focus:ring-2 focus:ring-blue-500"
                 ></textarea>
               </div>
               <ValidationType type="message" />
               <div className="text-center">
-                <button type="submit" className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition" onClick={handleSubmitForm}>
+                <button type="submit" style={{backgroundColor: "#2E186A"}} className=" text-white font-bold px-6 py-2 rounded hover:bg-orange-600 transition" onClick={handleSubmitForm}>
                   {t("Submit")}
                 </button>
               </div>

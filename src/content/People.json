@@ -26,12 +26,5 @@
     "button": "View People",
     "name": "",
     "linkURL": "https://loyolapolytechnic.co.in/LOYOLA%20POLYTECHNIC%20FACULTY.pdf"
-  },
-  {
-    "title": "Non Teaching",
-    "imageURL": "./img/non-teaching-staff.png",
-    "button": "View People",
-    "linkURL": "https://loyolapolytechnic.co.in/LOYOLA%20POLYTECHNIC%20FACULTY.pdf",
-    "name": ""
   }
 ]

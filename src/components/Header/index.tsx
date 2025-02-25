@@ -33,6 +33,7 @@ const Header = ({ t }: { t: TFunction }) => {
     };
     return (
       <>
+      <div>
         <CustomNavLinkSmall>
         <Link to="/">
           <Span>{t("Home")}</Span>
@@ -66,6 +67,7 @@ const Header = ({ t }: { t: TFunction }) => {
             <Button>{t("Contact")}</Button>
           </Span>
         </CustomNavLinkSmall>
+        </div>
       </>
     );
   };

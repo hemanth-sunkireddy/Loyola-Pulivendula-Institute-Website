@@ -3,9 +3,17 @@ import { withTranslation } from "react-i18next";
 import { HomePageStartBlockProps } from "./types";
 import { Button } from "../../common/Button";
 import { useNavigate } from "react-router-dom";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+const images = [
+  "img/event1.jpeg",
+  "img/event_1.jpeg",
+  "img/event_3.jpeg",
+  "img/event_7.jpeg"
+];
 
 const HomePageStartBlock = ({
-  videourl,
   title,
   content,
   button,
@@ -32,7 +40,6 @@ const HomePageStartBlock = ({
                         key={id}
                         color={item.color}
                         onClick={() => navigation(item.url)}
-                        // className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition duration-300"
                       >
                         {t(item.title)}
                       </Button>
@@ -41,14 +48,22 @@ const HomePageStartBlock = ({
               )}
             </div>
 
-            {/* Second Grid: Video */}
+            {/* Second Grid: Image Carousel */}
             <div className="flex justify-center">
-              <iframe
+              <Carousel
+                showArrows={true}
+                autoPlay={true}
+                infiniteLoop={true}
+                interval={1500}
+                showThumbs={false}
                 className="w-full sm:h-80 lg:h-96 rounded-md shadow-lg"
-                src="https://www.youtube.com/embed/fFXliHpgBiU?si=DZEVfNHegdz-Wbdm&amp;start=98"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-              />
+              >
+                {images.map((img, index) => (
+                  <div key={index}>
+                    <img src={img} alt={`event_${index + 1}`} className="w-full h-full object-cover rounded-md" />
+                  </div>
+                ))}
+              </Carousel>
             </div>
           </div>
         </div>

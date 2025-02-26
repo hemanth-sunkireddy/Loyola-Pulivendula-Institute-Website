@@ -11,14 +11,19 @@
     "name": "auditorium"
   },
   {
-    "title": "Hostel",
+    "title": "Seminars",
+    "imageURL": "./img/seminar-hall.jpg",
+    "name": "seminor-hall"
+  },
+  {
+    "title": "Boys Hostel",
     "imageURL": "./img/hostel.jpg",
     "name": "hostel"
   },
   {
-    "title": "Seminars",
-    "imageURL": "./img/seminar-hall.jpg",
-    "name": "seminor-hall"
+    "title": "Girls Hostel",
+    "imageURL": "./img/girls_hostel.jpg",
+    "name": "girls_hostel"
   },
   {
     "title": "Exam Hall",

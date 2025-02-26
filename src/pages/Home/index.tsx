@@ -1,4 +1,5 @@
 import { lazy } from "react";
+import { Fade } from "react-awesome-reveal";
 import IntroContent from "../../content/IntroContent.json";
 // import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import AboutContent from "../../content/AboutContent.json";
@@ -15,6 +16,7 @@ const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const HomePageStartBlock = lazy(() => import("../../components/HomePageStartBlock"));
+const EventsLatestStartBlock = lazy(() => import("../../components/Events_Latest"));
 
 const Home = () => {
   return (
@@ -30,6 +32,7 @@ const Home = () => {
       />
        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:mt-20 mt-3">
        <div className="bg-sky-200 p-6 rounded-lg">
+       <Fade direction="left" triggerOnce fraction={0.5}>
       <ContentBlock
         direction="left"
         title={AboutContent.title}
@@ -37,8 +40,10 @@ const Home = () => {
         icon="graphs.svg"
         id="about"
       />
+      </Fade>
       </div>
       <div className="bg-green-200 p-6 rounded-lg">
+      <Fade direction="right" triggerOnce fraction={0.5}>
       <ContentBlock
         direction="right"
         title={MissionContent.title}
@@ -46,8 +51,17 @@ const Home = () => {
         icon="product-launch.svg"
         id="mission"
       />
+      </Fade>
       </div>
       </div>
+      <EventsLatestStartBlock
+        direction="right"
+        title={IntroContent.title}
+        content={IntroContent.text}
+        button={IntroContent.button}
+        videourl={IntroContent.videourl}
+        id="intro"
+      />
       <Contact
         title={ContactContent.title}
         content={ContactContent.text}

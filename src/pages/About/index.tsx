@@ -20,7 +20,7 @@ const About = () => {
           <Fade key={index} triggerOnce>
             <div className="flex flex-col items-center text-center p-5 rounded-lg">
               <div 
-                className="w-40 h-40 rounded-full bg-cover bg-center mb-4" 
+                className="w-40 h-40 rounded-full bg-cover bg-center mb-4 transform transition-transform duration-300 hover:scale-110" 
                 style={{ backgroundImage: `url(${person.imageURL})` }}
               ></div>
               <h3 className="text-2xl font-bold text-gray-800 mb-2">{person.title}</h3>
@@ -48,7 +48,7 @@ const About = () => {
           <Fade direction="left" triggerOnce fraction={0.2}>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 items-center text-left">
               <div>
-                <img src="/img/Jesuits.png" alt="Loyola History" className="w-10/12 rounded-lg shadow-lg" />
+                <img src="/img/Jesuits.png" alt="Loyola History" className="w-10/12 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-110" />
               </div>
               <div className="md:col-span-2">
                 <p className="text-base font-semibold text-black leading-relaxed">{aboutHistory["loyola-history"]}</p>
@@ -66,7 +66,7 @@ const About = () => {
                 <p className="text-base text-black font-semibold leading-relaxed">{aboutHistory["college-history"]}</p>
               </div>
               <div>
-                <img src="/img/Collage.png" alt="College History" className="w-full rounded-lg shadow-lg" />
+                <img src="/img/Collage.png" alt="College History" className="w-full rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-110" />
               </div>
             </div>
           </Fade>

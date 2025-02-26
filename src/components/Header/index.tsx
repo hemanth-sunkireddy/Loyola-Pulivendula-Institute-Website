@@ -56,7 +56,7 @@ const Header = ({ t }: { t: TFunction }) => {
         </CustomNavLinkSmall>
         <CustomNavLinkSmall>
         <Link to="/events">
-          <Span>{t("Events")}</Span>
+          <Span>{t("Gallery")}</Span>
         </Link>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall

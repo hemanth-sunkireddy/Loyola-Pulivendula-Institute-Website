@@ -14,7 +14,7 @@ const Infrastructure = () => {
               <img 
                 src={course.imageURL} 
                 alt={course.title} 
-                className="w-full h-64 object-cover rounded-2xl bg-transparent"
+                className="w-full h-64 object-cover rounded-2xl bg-transparent transform transition-transform duration-300 hover:scale-110"
               />
               <div className="p-4">
                 <h3 className="text-xl font-semibold text-gray-800 text-center">

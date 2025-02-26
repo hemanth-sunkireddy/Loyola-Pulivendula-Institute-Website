@@ -15,7 +15,7 @@ const Events = () => {
               <img 
                 src={event.imageURL} 
                 alt={event.title} 
-                className="w-full h-64 object-cover rounded-2xl bg-transparent"
+                className="w-full h-64 object-cover rounded-2xl transition-transform duration-300 ease-in-out group-hover:scale-110"
               />
               <div className="p-4 flex justify-center items-center">
                 <h3 className="text-xl font-semibold text-gray-800 text-center">
@@ -36,7 +36,7 @@ const Events = () => {
               <img 
                 src={event.imageURL} 
                 alt={`Achievement ${index + 1}`} 
-                className="w-full h-64 rounded-2xl"
+                className="w-full h-64 rounded-2xl transition-transform duration-300 ease-in-out group-hover:scale-110"
               />
             </div>
           </Fade>

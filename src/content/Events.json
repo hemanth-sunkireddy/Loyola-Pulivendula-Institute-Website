@@ -39,5 +39,20 @@
     "title": "Alumni Meet",
     "imageURL": "./img/alumni-meet.jpg",
     "name":""
+  },
+  {
+    "title": "Department 1 Fest",
+    "imageURL": "./img/event_17.jpeg",
+    "name":""
+  },
+  {
+    "title": "Department 2 Fest",
+    "imageURL": "./img/event_18.jpeg",
+    "name":""
+  },
+  {
+    "title": "Department 3 Fest",
+    "imageURL": "./img/event_20.jpeg",
+    "name":""
   }
 ]

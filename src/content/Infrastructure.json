@@ -11,7 +11,7 @@
     "name": "auditorium"
   },
   {
-    "title": "Seminars",
+    "title": "Seminar Hall",
     "imageURL": "./img/seminar-hall.jpg",
     "name": "seminor-hall"
   },
@@ -26,7 +26,7 @@
     "name": "girls_hostel"
   },
   {
-    "title": "Exam Hall",
+    "title": "Department",
     "imageURL": "./img/exam-section.jpg",
     "name" : "exam-section"
   },

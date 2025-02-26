@@ -11,7 +11,7 @@ const images = [
   "img/event_1.jpeg",
   "img/event_3.jpeg",
   "img/event_2.jpeg",
-  "img/event_7.jpeg"
+  "img/slide_1.jpeg"
 ];
 
 const HomePageStartBlock = ({

@@ -77,7 +77,7 @@ const Footer = ({ t }: { t: TFunction }) => {
             </Col>
             <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{t("Developers")}</Title>
-              <Para className="font-semibold">{t(`Sir K.Veeranjaneya Reddy`)}</Para>
+              <Para className="font-semibold">{t(`Sir D.Naresh`)}</Para>
               <Para className="font-semibold">{t(`A. Siri`)}</Para>
               <Para className="font-semibold">{t(`B.Pavithra`)}</Para>
               <Para className="font-semibold">{t(`K.Lavanya`)}</Para>
@@ -96,7 +96,7 @@ const Footer = ({ t }: { t: TFunction }) => {
               </LogoContainer>
             </NavLink>
             <FooterContainer>
-              <p>copyright ⓒ 2025, Loyola Polytechnic, Pulivendula. Last updated: 26/02/2025</p>
+              <p>copyright ⓒ 2025, Loyola Polytechnic, Pulivendula. Last updated: 27/02/2025</p>
             </FooterContainer>
           </Row>
         </Container>

@@ -60,7 +60,7 @@ const Header = ({ t }: { t: TFunction }) => {
         </Link>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
-          style={{ width: "180px" }}
+          style={{ width: "130px" }}
         >
           <Link to="/login">
           <Span>

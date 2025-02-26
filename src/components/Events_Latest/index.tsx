@@ -26,7 +26,7 @@ const EventsLatestStartBlock = ({
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8" id={id}>
             {/* First Grid: Latest News and Events */}
             <div className="flex flex-col justify-center space-y-6">
-              <h6 className="text-4xl font-extrabold font-mono" style={{ color: "#414886" }}>
+              <h6 className="text-2xl font-extrabold font-mono" style={{ color: "#414886" }}>
                 {t("Events and Notifications")}
               </h6>
               <div className="border-2 border-black">

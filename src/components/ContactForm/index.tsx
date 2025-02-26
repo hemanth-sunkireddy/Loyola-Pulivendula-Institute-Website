@@ -76,7 +76,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
 
   return (
     <div id={id} className="container mx-auto p-4">
-      <h2 className="text-center text-3xl font-bold mb-8">{title}</h2>
+      <h2 className="text-center text-2xl font-bold mb-8">{title}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="bg-stone-300 p-8 rounded-lg flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 flex items-center justify-center hidden md:flex">

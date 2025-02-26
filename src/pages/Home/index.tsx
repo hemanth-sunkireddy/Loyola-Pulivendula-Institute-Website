@@ -31,7 +31,7 @@ const Home = () => {
         id="intro"
       />
        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:mt-20 mt-3">
-       <div className="bg-sky-200 p-6 rounded-lg">
+       <div className="bg-[#F5F5DC] p-6 rounded-lg">
        <Fade direction="left" triggerOnce fraction={0.5}>
       <ContentBlock
         direction="left"

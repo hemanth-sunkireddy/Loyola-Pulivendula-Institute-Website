@@ -1,24 +1,45 @@
 import MiddleBlockContent from "../../content/Events.json"; // Assuming this is an array of event objects
 import Container from "../../common/Container";
 import ScrollToTop from "../../common/ScrollToTop";
+import { Fade } from "react-awesome-reveal";
+import AchievementsContent from "../../content/Achivements.json";
 
 const Events = () => {
   return (
     <Container>
-      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 md:gap-10 gap-8">
-        {/* Dynamically render event content */}
+      <h2 className="text-center text-4xl mb-2">Events</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 md:gap-10 gap-8 bg-transparent">
         {MiddleBlockContent.map((event, index) => (
-          <div key={index} className="group relative overflow-hidden rounded-lg shadow-lg bg-white">
-            {/* Event Image */}
-            <div className="w-full h-64 bg-cover bg-center" style={{ backgroundImage: `url(${event.imageURL})` }}></div>
-            <div className="p-4">
-              {/* Event Title */}
-              <h3 className="text-xl font-semibold text-gray-800 group-hover:text-indigo-600">{event.title}</h3>
-              {/* Event Name */}
-              <p className="mt-2 text-gray-600">{event.name}</p>
-              {/* Conditionally render the button if it exists */}
+          <Fade key={index}>
+            <div className="group relative overflow-hidden rounded-lg shadow-lg bg-[#F5F5DC]">
+              <img 
+                src={event.imageURL} 
+                alt={event.title} 
+                className="w-full h-64 object-cover rounded-2xl bg-transparent"
+              />
+              <div className="p-4 flex justify-center items-center">
+                <h3 className="text-xl font-semibold text-gray-800 text-center">
+                  {event.title}
+                </h3>
+              </div>
             </div>
-          </div>
+          </Fade>
+        ))}
+      </div>
+
+      {/* Achievements */}
+      <h2 className="text-center text-4xl mb-2 mt-10">Achievements</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 md:gap-10 gap-8 bg-transparent">
+        {AchievementsContent.map((event, index) => (
+          <Fade key={index}>
+            <div className="group relative overflow-hidden rounded-lg shadow-lg">
+              <img 
+                src={event.imageURL} 
+                alt={`Achievement ${index + 1}`} 
+                className="w-full h-64 rounded-2xl"
+              />
+            </div>
+          </Fade>
         ))}
       </div>
       <ScrollToTop />

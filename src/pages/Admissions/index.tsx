@@ -77,7 +77,7 @@ const Admissions = () => {
 
       {/* Eligibility and Documents Required */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-        <div className="p-6 rounded-lg bg-sky-200">
+        <div className="p-6 rounded-lg bg-[#F5F5DC]">
           <h2 className="text-2xl font-semibold text-black text-center">Eligibility Criteria</h2>
           <p className="text-lg text-black font-semibold">{admissionCriteria.eligibilityCriteria.entranceExam}</p>
           <ul className="space-y-2">

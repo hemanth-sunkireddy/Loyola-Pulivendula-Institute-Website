@@ -31,7 +31,7 @@ const Footer = ({ t }: { t: TFunction }) => {
       <FooterSection>
         <Container>
           <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
+            <Col lg={8} md={8} sm={12} xs={12}>
               <Language>{t("How to Reach us")}</Language>
               <Row align="middle" style={{ gap: '16px', marginTop: '5px'}}>
                 <SvgIcon src={"phone.svg"} aria-label="mobile" width="48px" height="48px" />
@@ -47,19 +47,33 @@ const Footer = ({ t }: { t: TFunction }) => {
                 </a>
               </Row>
             </Col>
+
             <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Quick Links")}</Title>
-              <Large to="https://loyolapolytechnic.co.in/BROCHURE.pdf" target="_blank" rel="noopener noreferrer">
-                {t("Institute Brochure")}
-              </Large>
-              <Large to="https://dteap.nic.in/" target="_blank" rel="noopener noreferrer">
-                {t("Department of Technical Education")}
+              <Title>{t("Useful Links")}</Title>
+              <Large to="https://sbtet.ap.gov.in/APSBTET/results.do" target="_blank" rel="noopener noreferrer">
+                {t("Exam Results")}
               </Large>
               <Large to="https://www.aicte-india.org/" target="_blank" rel="noopener noreferrer">
                 {t("AICTE India")}
               </Large>
+              <Large to="https://sbtet.ap.gov.in/APSBTET/" target="_blank" rel="noopener noreferrer">
+                {t("SBTET, AP")}
+              </Large>
+              <Large to="https://dteap.nic.in/" target="_blank" rel="noopener noreferrer">
+                {t("Department of Technical Education")}
+              </Large>
             </Col>
-            
+
+            <Col lg={8} md={8} sm={12} xs={12}>
+              <Title>{t("Quick Links")}</Title>
+              <Large to="Institute_pdfs/BROCHURE.pdf" target="_blank" rel="noopener noreferrer">
+                {t("Institute Brochure")}
+              </Large>
+              <Large to="Institute_pdfs/AICTE_EOA.pdf" target="_blank" rel="noopener noreferrer">
+                {t("AICTE Extension of Approval")}
+              </Large>
+              
+            </Col>
           </Row>
           
           <Row justify="space-between">

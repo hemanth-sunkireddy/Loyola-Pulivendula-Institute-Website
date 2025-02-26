@@ -13,10 +13,9 @@ const EventsLatestStartBlock = ({
 
   const events = [
     { id: 1, date: "19-02-2025", description: <>SBTET-AP Diploma Exams March/April 2025: Applications open for C-23, C-20, C-16, ER-91, ER-2020 schemes. <a href="https://sbtet.ap.gov.in/APSBTET/adimissionpdfs.do?mode=downloadPDFFile&filename=DiplomaexamsMarApril25Notification.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Click here</a> for more details.</> },
-    { id: 2, date: "2025-02-21", description: "Event description 2" },
-    { id: 3, date: "2025-02-22", description: "Event description 3" },
-    { id: 4, date: "2025-02-23", description: "Event description 4" },
-    { id: 5, date: "2024-07-24", description: "Hearty Welcome to the NBA Expert team/NBA team Visit from Aug 30 to sept 01, 2024" },
+    { id: 2, date: "15-02-2025", description: "Join us for the 45th College Day Celebrations on February 15, 2025. Don't miss this memorable event!" },
+    { id: 3, date: "06-01-2025", description: <>AP POLYCET-2025 is scheduled for April 30, 2025. <a href="https://dteap.nic.in/notifications/17_Polycet_GO_35_20022025.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Click here</a> for more details.</> },
+    { id: 4, date: "24-07-2024", description: "Hearty Welcome to the NBA Expert team/NBA team Visit from Aug 30 to sept 01, 2024" },
   ];
 
   return (

@@ -10,6 +10,7 @@ const images = [
   "img/event1.jpeg",
   "img/event_1.jpeg",
   "img/event_3.jpeg",
+  "img/event_2.jpeg",
   "img/event_7.jpeg"
 ];
 

@@ -12,6 +12,7 @@ import Admissions from "../pages/Admissions";
 import Events from "../pages/Events";
 import CourseSingle from "../pages/Course_Single";
 import Admin from "../pages/Admin";
+import Login from "../pages/Admin/Login";
 
 const Router = () => {
   return (
@@ -37,6 +38,7 @@ const Router = () => {
       <Route key={"events"} path={"/events"}  element={<Events />} />
       <Route key={"courseSingle"} path={"/course"}  element={<CourseSingle />} />
       <Route key={"admin"} path={"/admin"}  element={<Admin />} />
+      <Route key={"login"} path={"/login"}  element={<Login />} />
       </Routes>
       <Footer />
     </Suspense>

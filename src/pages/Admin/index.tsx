@@ -68,10 +68,10 @@ const Admin = () => {
               <table className="min-w-full table-auto border-collapse">
                 <thead>
                   <tr>
-                    <th className="border px-4 py-2">Name</th>
-                    <th className="border px-4 py-2">Email</th>
-                    <th className="border px-4 py-2">Message</th>
-                    <th className="border px-4 py-2">Timestamp</th>
+                    <th className="border px-4 py-2 font-bold text-2xl">Name</th>
+                    <th className="border px-4 py-2 font-bold text-2xl">Email</th>
+                    <th className="border px-4 py-2 font-bold text-2xl">Message</th>
+                    <th className="border px-4 py-2 font-bold text-2xl">Recieved On</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -97,7 +97,7 @@ const Admin = () => {
                   className="bg-white shadow-md rounded-lg p-4 flex flex-col space-y-4"
                 >
                   <div className="flex items-center justify-between">
-                    <strong>Name:</strong>
+                    <strong className="font-bold">Name:</strong>
                     <span>{form.name}</span>
                   </div>
                   <div className="flex items-center justify-between">

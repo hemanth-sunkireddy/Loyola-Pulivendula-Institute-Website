@@ -32,7 +32,7 @@ const Home = () => {
       />
        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:mt-20 mt-3">
        <div className="bg-[#F5F5DC] p-6 rounded-lg">
-       <Fade direction="left" triggerOnce fraction={0.5}>
+       <Fade direction="left" triggerOnce fraction={0.3}>
       <ContentBlock
         direction="left"
         title={AboutContent.title}
@@ -43,7 +43,7 @@ const Home = () => {
       </Fade>
       </div>
       <div className="bg-green-200 p-6 rounded-lg">
-      <Fade direction="right" triggerOnce fraction={0.5}>
+      <Fade direction="right" triggerOnce fraction={0.3}>
       <ContentBlock
         direction="right"
         title={MissionContent.title}

@@ -19,6 +19,11 @@
     "imageURL": "./img/achievement_9.jpeg",
     "name": ""
   },
+  {
+    "title": "",
+    "imageURL": "./img/achievement_10.jpg",
+    "name": ""
+  },
   
     {
       "title": "",
@@ -31,19 +36,19 @@
     },
    
     {
-      "title": "Teachers Day",
-      "imageURL": "./img/achievement_4.jpeg",
-      "name" : ""
+      "title": "Sankranthi",
+      "imageURL": "./img/achievement_3.jpeg",
+      "name": ""
     },
-    
     {
       "title": "Flood Relief Help",
       "imageURL": "./img/achievement_7.jpeg",
       "name":""
     },
     {
-      "title": "Sankranthi",
-      "imageURL": "./img/achievement_3.jpeg",
-      "name": ""
+      "title": "Teachers Day",
+      "imageURL": "./img/achievement_4.jpeg",
+      "name" : ""
     }
+   
   ]  

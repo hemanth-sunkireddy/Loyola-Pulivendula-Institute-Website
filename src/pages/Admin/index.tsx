@@ -39,8 +39,37 @@ const Admin = () => {
   const [eventDescription, setEventDescription] = useState("");
   const [contactForms, setContactForms] = useState<ContactFormItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
+    const checkAuthentication = async () => {
+      const username = localStorage.getItem('username');
+      const password = localStorage.getItem('password');
+      if (!username || !password) {
+        setIsAuthenticated(false);
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const querySnapshot = await getDocs(collection(db, "users"));
+        const users = querySnapshot.docs.map(doc => doc.data());
+        const userExists = users.some(user => user.username === username && user.password === password);
+        setIsAuthenticated(userExists);
+        setLoading(false);
+      } catch (error) {
+        console.error("Error checking authentication: ", error);
+        setIsAuthenticated(false);
+        setLoading(false);
+      }
+    };
+
+    checkAuthentication();
+  }, []);
+
+  useEffect(() => {
+    if (!isAuthenticated) return;
+
     const fetchEvents = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "events_and_notifications"));
@@ -68,7 +97,7 @@ const Admin = () => {
     };
 
     fetchData();
-  }, []);
+  }, [isAuthenticated]);
 
   const addEvent = async () => {
     if (!eventDate || !eventDescription) return;
@@ -96,14 +125,15 @@ const Admin = () => {
     }
   };
 
+  if (loading) return <p>Loading...</p>;
+  if (!isAuthenticated) return <p className="text-center">Error: Unauthorized access, Please Login before using Admin Dashboard Or Clear your browser cache if you think you entered correct credentials.</p>;
+
   return (
     <Container>
       <section>
         <h4 className="text-center text-3xl">Contact Form Submissions</h4>
 
-        {loading ? (
-          <p>Loading contact form submissions...</p>
-        ) : contactForms.length === 0 ? (
+        {contactForms.length === 0 ? (
           <p>No contact form submissions yet.</p>
         ) : (
           <div className="overflow-x-auto">
@@ -157,9 +187,7 @@ const Admin = () => {
 
         <div>
           <h4 className="text-center text-3xl">Delete Event</h4>
-          {loading ? (
-            <p>Loading events...</p>
-          ) : events.length === 0 ? (
+          {events.length === 0 ? (
             <p>No events added yet.</p>
           ) : (
             <ul className="list-disc p-4 space-y-4">
@@ -173,6 +201,7 @@ const Admin = () => {
           )}
         </div>
       </section>
+
       <ScrollToTop />
     </Container>
   );

@@ -5,6 +5,21 @@ import { Button } from "../../common/Button";
 import Input from "../../common/Input";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "../Admin/styles";
 import { useNavigate } from "react-router-dom";
+import { getFirestore, collection, getDocs, addDoc, deleteDoc, doc } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCYbTOTqUajcIkd8oCvpEadFt7RyvBjfng",
+  authDomain: "loyola-institute-website.firebaseapp.com",
+  projectId: "loyola-institute-website",
+  storageBucket: "loyola-institute-website.firebasestorage.app",
+  messagingSenderId: "402915219080",
+  appId: "1:402915219080:web:7ea779b21ce69e4829313d",
+  measurementId: "G-M5X9CS51T0"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -12,11 +27,25 @@ const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
-  const checkCredentials = () => {
-    if (username === "admin" && password === "admin") {
-      navigate("/admin");
-    } else {
+  const checkCredentials = async () => {
+    const querySnapshot = await getDocs(collection(db, "users"));
+    let userExists = false;
+
+    querySnapshot.forEach((doc) => {
+      const userData = doc.data();
+      if (userData.username === username && userData.password === password) {
+        userExists = true;
+        localStorage.setItem("username", userData.username);
+        localStorage.setItem("password", userData.password);
+        navigate("/admin");
+      }
+    });
+
+    if (!userExists) {
       setErrorMessage("Incorrect username or password.");
+    }
+    else{
+      navigate("/admin");
     }
   };
 
@@ -51,7 +80,7 @@ const Login = () => {
         </Col>
         <Col lg={12} md={12} sm={24} xs={24}>
           <Slide direction="right" triggerOnce>
-            <FormGroup autoComplete="off">
+            <FormGroup autoComplete="off" onSubmit={(e) => e.preventDefault()}>
               <Col span={24}>
                 <Input
                   type="text"

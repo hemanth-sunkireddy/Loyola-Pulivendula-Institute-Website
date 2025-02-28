@@ -50,6 +50,7 @@ const EventsLatestStartBlock = ({
 
       const sortedEvents = eventsList.sort((a, b) => parseDate(b.event_date).getTime() - parseDate(a.event_date).getTime());
       setEvents(sortedEvents);
+      console.log(sortedEvents);
     };
 
     fetchEvents();

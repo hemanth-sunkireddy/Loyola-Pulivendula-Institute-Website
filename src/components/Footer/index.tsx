@@ -92,10 +92,10 @@ const Footer = ({ t }: { t: TFunction }) => {
             <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{t("Developers")}</Title>
               <Para className="font-semibold">{t(`Sir D.Naresh`)}</Para>
-              <Para className="font-semibold">{t(`A. Siri`)}</Para>
-              <Para className="font-semibold">{t(`B.Pavithra`)}</Para>
-              <Para className="font-semibold">{t(`K.Lavanya`)}</Para>
-              <Para className="font-semibold">{t(`K.Sai Sree`)}</Para>
+              <Para className="font-semibold">{t(`A. Siri (22029-cm-107)`)}</Para>
+              <Para className="font-semibold">{t(`B.Pavithra (22029-cm-093)`)}</Para>
+              <Para className="font-semibold">{t(`K.Lavanya (22029-cm-081)`)}</Para>
+              <Para className="font-semibold">{t(`K.Sai Sree (22029-cm-103)`)}</Para>
             </Col>
           </Row>
         </Container>

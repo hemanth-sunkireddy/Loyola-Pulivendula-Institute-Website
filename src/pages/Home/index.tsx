@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import IntroContent from "../../content/IntroContent.json";
 import AboutContent from "../../content/AboutContent.json";
@@ -14,7 +14,18 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const HomePageStartBlock = lazy(() => import("../../components/HomePageStartBlock"));
 const EventsLatestStartBlock = lazy(() => import("../../components/Events_Latest"));
 
+
+
 const Home = () => {
+  useEffect(() => {
+    const hasReloaded = localStorage.getItem("hasReloadedInHome");
+    
+    if (!hasReloaded) {
+      localStorage.removeItem("username");
+      localStorage.setItem("hasReloadedInHome", "true");
+      window.location.reload();
+    }
+  }, []);
   return (
     <Container>
       <ScrollToTop />

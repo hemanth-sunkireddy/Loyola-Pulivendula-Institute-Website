@@ -9,6 +9,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 const images = [
   "img/event1.jpeg",
   "img/event_1.jpeg",
+  "img/slide_2.jpeg",
   "img/event_3.jpeg",
   "img/event_2.jpeg",
   "img/slide_1.jpeg"

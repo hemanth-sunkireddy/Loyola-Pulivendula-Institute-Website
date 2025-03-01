@@ -67,7 +67,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
         timestamp: new Date(),
       });
       handleReset();
-      alert("Message submitted successfully!");
+      alert("Message submitted successfully! Your message has been received! Thanks for contacting us! Our team will respond to you as soon as possible.");
     } catch (error) {
       console.error("Error submitting message: ", error);
       alert("There was an error submitting your message.");

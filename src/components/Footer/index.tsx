@@ -110,7 +110,7 @@ const Footer = ({ t }: { t: TFunction }) => {
               </LogoContainer>
             </NavLink>
             <FooterContainer>
-              <p>copyright ⓒ 2025, Loyola Polytechnic, Pulivendula. Last updated: 27/02/2025</p>
+              <p>copyright ⓒ 2025, Loyola Polytechnic, Pulivendula. Last updated: 28w/02/2025</p>
             </FooterContainer>
           </Row>
         </Container>

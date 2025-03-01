@@ -41,6 +41,7 @@ const Login = () => {
         localStorage.setItem("username", userData.username);
         localStorage.setItem("password", userData.password);
         login(userData.username);
+        localStorage.removeItem("hasReloadedInHome");
         navigate("/admin");
       }
     });
@@ -55,6 +56,7 @@ const Login = () => {
 
   return (
     <ContactContainer>
+      <p className="text-center">For evaluation purposes, please use the username <span className="text-black"><b>admin</b></span> and password <span className="text-black"><b>admin</b></span></p>
       <Row justify="space-between" align="middle" style={{ minHeight: "20vh" }}>
         <Col
           lg={12}
@@ -70,6 +72,7 @@ const Login = () => {
             gap: "1rem",
           }}
         >
+          
           <Slide direction="left" triggerOnce>
             <h2>Login</h2>
             <img
@@ -77,8 +80,11 @@ const Login = () => {
               alt="Admin icon"
               style={{ width: "100px", height: "100px" }}
             />
+            
             <p className="p-8">
-              Admin can see the responses submitted through the contact form present on the homepage.
+              Admin can Add a new Event.<br />
+              Admin can delete the existing Event. <br />
+              Admin can see the responses submitted through the contact form present on the homepage.<br />
             </p>
           </Slide>
         </Col>

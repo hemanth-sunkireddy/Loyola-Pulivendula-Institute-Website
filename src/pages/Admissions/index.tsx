@@ -11,7 +11,7 @@ const Admissions = () => {
   // Sort courses by intake in descending order
   const coursesData = admissionCriteria.coursesAvailable
     .map((course) => ({
-      name: course.courseName.replace(/.* in (.*) Engineering/, '$1'), // Remove "Department in * Engineering"
+      name: course.shortName,
       intake: course.intake
     }))
     .sort((a, b) => b.intake - a.intake);

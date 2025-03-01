@@ -9,32 +9,38 @@
       "coursesAvailable": [
         {
           "courseName": "Diploma in Computer Engineering",
+          "shortName": "CME",
           "intake": 120,
           "duration": "3 Years"
         },
         {
           "courseName": "Diploma in Electronics Engineering",
           "intake": 180,
+          "shortName": "EEE",
           "duration": "3 Years"
         },
         {
           "courseName": "Diploma in Electrical Engineering",
           "intake": 180,
+          "shortName": "ECE",
           "duration": "3 Years"
         },
         {
           "courseName": "Diploma in Mining Engineering",
           "intake": 36,
+          "shortName": "MNG",
           "duration": "3 Years"
         },
         {
           "courseName": "Diploma in Mechanical Engineering",
           "intake": 60,
+          "shortName": "MECH",
           "duration": "3 Years"
         },
         {
           "courseName": "Diploma in Civil Engineering",
           "intake": 90,
+          "shortName": "CIVIL",
           "duration": "3 Years"
         }
       ],

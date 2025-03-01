@@ -56,7 +56,7 @@ const Login = () => {
 
   return (
     <ContactContainer>
-      {/* <p className="text-center">For evaluation purposes, please use the username <span className="text-black"><b>admin</b></span> and password <span className="text-black"><b>admin</b></span></p> */}
+      <p className="text-center">For evaluation purposes, please use the username <span className="text-black"><b>admin</b></span> and password <span className="text-black"><b>admin</b></span></p>
       <Row justify="space-between" align="middle" style={{ minHeight: "20vh" }}>
         <Col
           lg={12}

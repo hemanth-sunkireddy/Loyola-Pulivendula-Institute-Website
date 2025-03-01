@@ -16,58 +16,54 @@ import {
   Outline,
   Span,
 } from "./styles";
+import { useAuth } from "../AuthContext";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
+  const { user, logout } = useAuth(); // Get username and logout from context
+
   const toggleButton = () => {
     setVisibility(!visible);
   };
 
   const MenuItem = () => {
-    const scrollTo = (id: string) => {
-      const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-      setVisibility(false);
-    };
     return (
       <>
-      <div>
-        <CustomNavLinkSmall>
-        <Link to="/">
-          <Span>{t("Home")}</Span>
-        </Link>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall>
-        <Link to="/about">
-          <Span>{t("About")}</Span>
-        </Link>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall>
-        <Link to="/courses">
-          <Span>{t("Courses")}</Span>
-        </Link>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall>
-        <Link to="/admissions">
-          <Span>{t("Admissions")}</Span>
-        </Link>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall>
-        <Link to="/events">
-          <Span>{t("Gallery")}</Span>
-        </Link>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall
-          style={{ width: "130px" }}
-        >
-          <Link to="/login">
-          <Span>
-            <Button>{t("Admin Login")}</Button>
-          </Span>
-          </Link>
-        </CustomNavLinkSmall>
+        <div>
+          <CustomNavLinkSmall>
+            <Link to="/">
+              <Span>{t("Home")}</Span>
+            </Link>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall>
+            <Link to="/about">
+              <Span>{t("About")}</Span>
+            </Link>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall>
+            <Link to="/courses">
+              <Span>{t("Courses")}</Span>
+            </Link>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall>
+            <Link to="/admissions">
+              <Span>{t("Admissions")}</Span>
+            </Link>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall>
+            <Link to="/events">
+              <Span>{t("Gallery")}</Span>
+            </Link>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall style={{ width: "130px" }}>
+            {user ? (
+              <Button onClick={logout}>{t("Logout")}</Button>
+            ) : (
+              <Link to="/login">
+                <Button>{t("Admin Login")}</Button>
+              </Link>
+            )}
+          </CustomNavLinkSmall>
         </div>
       </>
     );

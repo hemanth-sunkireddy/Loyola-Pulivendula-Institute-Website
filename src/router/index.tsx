@@ -13,35 +13,50 @@ import Events from "../pages/Events";
 import CourseSingle from "../pages/Course_Single";
 import Admin from "../pages/Admin";
 import Login from "../pages/Admin/Login";
+import { AuthProvider } from "../components/AuthContext";
 
 const Router = () => {
   return (
+    <AuthProvider>
     <Suspense fallback={null}>
       <Styles />
       <Header />
       <Routes>
-        {routes.map((routeItem) => {
-          return (
-            <>
-            <Route
-              key={routeItem.component}
-              path={"/"}
-              element={<Home />}
-            />
-          </>
-          );
-        })}
-      <Route key={"about"} path={"/about"}  element={<About />} />
-      <Route key={"courses"} path={"/courses"}  element={<Courses />} />
-      <Route key={"infrastructure"} path={"/infrastructure"}  element={<Infrastructure />} />
-      <Route key={"admissions"} path={"/admissions"}  element={<Admissions />} />
-      <Route key={"events"} path={"/events"}  element={<Events />} />
-      <Route key={"courseSingle"} path={"/course"}  element={<CourseSingle />} />
-      <Route key={"admin"} path={"/admin"}  element={<Admin />} />
-      <Route key={"login"} path={"/login"}  element={<Login />} />
+        {routes.map((routeItem) => (
+          <Route
+            key={routeItem.component}
+            path={"/"}
+            element={<Home />}
+          />
+        ))}
+        <Route path="/about" element={<About />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/infrastructure" element={<Infrastructure />} />
+        <Route path="/admissions" element={<Admissions />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/course" element={<CourseSingle />} />
+        
+        {/* Wrap Admin and Login with AuthProvider */}
+        <Route
+          path="/admin"
+          element={
+            <AuthProvider>
+              <Admin />
+            </AuthProvider>
+          }
+        />
+        <Route
+          path="/login"
+          element={
+            <AuthProvider>
+              <Login />
+            </AuthProvider>
+          }
+        />
       </Routes>
       <Footer />
     </Suspense>
+    </AuthProvider>
   );
 };
 

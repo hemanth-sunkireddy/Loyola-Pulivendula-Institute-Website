@@ -45,6 +45,8 @@ const Admin = () => {
     const checkAuthentication = async () => {
       const username = localStorage.getItem('username');
       const password = localStorage.getItem('password');
+      const hasRefreshed = localStorage.getItem('hasRefreshed');
+
       if (!username || !password) {
         setIsAuthenticated(false);
         setLoading(false);
@@ -57,6 +59,11 @@ const Admin = () => {
         const userExists = users.some(user => user.username === username && user.password === password);
         setIsAuthenticated(userExists);
         setLoading(false);
+
+        if (userExists && !hasRefreshed) {
+        localStorage.setItem('hasRefreshed', 'true');
+        window.location.reload();
+      }
       } catch (error) {
         console.error("Error checking authentication: ", error);
         setIsAuthenticated(false);
@@ -66,10 +73,11 @@ const Admin = () => {
 
     checkAuthentication();
   }, []);
-
+  
+  
   useEffect(() => {
     if (!isAuthenticated) return;
-
+    
     const fetchEvents = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "events_and_notifications"));
@@ -94,9 +102,11 @@ const Admin = () => {
       setLoading(true);
       await Promise.all([fetchEvents(), fetchContactForms()]);
       setLoading(false);
+      localStorage.removeItem('hasRefreshed');
     };
 
     fetchData();
+
   }, [isAuthenticated]);
 
   const addEvent = async () => {
@@ -115,11 +125,22 @@ const Admin = () => {
     }
   };
 
-  const deleteEvent = async (id: string) => {
+  const deleteEvent = async (eventDate: string) => {
     try {
-      await deleteDoc(doc(db, "events_and_notifications", id));
-      setEvents(events.filter(event => event.id !== id));
-      alert("Event deleted successfully!");
+      const querySnapshot = await getDocs(collection(db, "events_and_notifications"));
+
+    // Find the document with the matching event_date
+    const matchingDoc = querySnapshot.docs.find(doc => doc.data().event_date === eventDate);
+
+    if (!matchingDoc) {
+      alert("No event found with that date!");
+      return;
+    }
+
+    // Delete the matched document
+    await deleteDoc(doc(db, "events_and_notifications", matchingDoc.id));
+    setEvents(events.filter(event => event.event_date !== eventDate));
+    alert("Event deleted successfully!");
     } catch (error) {
       console.error("Error deleting event: ", error);
     }
@@ -194,7 +215,7 @@ const Admin = () => {
               {events.map((event) => (
                 <li key={event.id} className="flex justify-between items-center p-2 border rounded-md">
                   <span>{event.event_date}: {event.event_description}</span>
-                  <Button onClick={() => deleteEvent(event.id)}>Delete</Button>
+                  <Button onClick={() => deleteEvent(event.event_date)}>Delete</Button>
                 </li>
               ))}
             </ul>

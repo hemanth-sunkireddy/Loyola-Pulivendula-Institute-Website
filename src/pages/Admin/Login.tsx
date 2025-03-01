@@ -7,6 +7,7 @@ import { ContactContainer, FormGroup, Span, ButtonContainer } from "../Admin/sty
 import { useNavigate } from "react-router-dom";
 import { getFirestore, collection, getDocs, addDoc, deleteDoc, doc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
+import { useAuth } from "../../components/AuthContext";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCYbTOTqUajcIkd8oCvpEadFt7RyvBjfng",
@@ -26,6 +27,8 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
+  const { login } = useAuth();
+
 
   const checkCredentials = async () => {
     const querySnapshot = await getDocs(collection(db, "users"));
@@ -37,6 +40,7 @@ const Login = () => {
         userExists = true;
         localStorage.setItem("username", userData.username);
         localStorage.setItem("password", userData.password);
+        login(userData.username);
         navigate("/admin");
       }
     });
